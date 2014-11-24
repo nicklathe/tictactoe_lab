@@ -28,16 +28,14 @@ document.addEventListener("DOMContentLoaded", function(){
 					this.style.backgroundColor = "#7A766D";
 					this.classList.add("X");
 					turn += 1;
-					if(turn === 9) { alert("Game over. Press 'Play Again' button for a rematch.") };
-					// xArray.push(this.getElementById);
-					checkWin(); //function doesn't work
+					if(turn === 9) { alert("Game over. Press 'Play Again' button for a rematch.") };				
+					checkWin(); 
 				} else {
 					this.innerHTML = "O";
 					this.style.backgroundColor = "#6D717A";
 					this.classList.add("O");
 					turn += 1;
 					if(turn === 9) { alert("Game over. Press 'Play Again' button for a rematch.") };
-					// oArray.push(this.getElementById);
 					checkWin();
 				}
 			}
