@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 	// declared variables
 	var turn = 0;
-	var xArray = [];
-	var oArray = [];
+
 	var winner = [["#t1","#t2","#t3"],["#t4","#t5","#t6"],["#t7","#t8","#t9"],["#t1","#t4","#t7"],["#t2","#t5","#t8"],["#t3","#t6","#t9"],["#t1","#t5","#t9"],["#t7","#t5","#t3"]];
 	// function to check for a win, that will be called later with every click
 	function checkWin(){
@@ -19,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 
 	}
+	// loops for each click event, and carries out function to update X and O, as well as call checkWin function
 	var button = document.querySelectorAll(".tab");
 	for(var i = 0; i < button.length; i++){
 		button[i].addEventListener("click", function(){
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		})
 	}
+	// button reloades page, so user can play again
 	document.querySelector(".btn-default").addEventListener("click", function() {
 		window.location.reload();
 	});
