@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function(){
 			alert("Game over. Press 'Play Again' button for a rematch.");
 		}
 	}
+	// function to updated header with turn indicator 
+	function turnXO(){
+		if(turn % 2 === 0){
+			document.querySelector("h2").innerHTML = "X's turn";
+		} else {
+			document.querySelector("h2").innerHTML = "O's turn";
+		}
+	}
 	// function to check for a win, that will be called later with every click
 	function checkWin(){
 		for(var j = 0; j < winner.length; j++){
@@ -39,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function(){
 					this.classList.add("X");
 					turn += 1;
 					gameOver();				
-					checkWin(); 
+					checkWin();
+					turnXO(); 
 				} else {
 					this.innerHTML = "O";
 					this.style.backgroundColor = "#6D717A";
@@ -47,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function(){
 					turn += 1;
 					gameOver();
 					checkWin();
+					turnXO();
 				}
 			}
 		})
